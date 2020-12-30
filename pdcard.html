@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+
+        img:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div id=productCard>
+        
+    </div>
+    <script>
+               const arr = [
+            {
+                "name": "我是郭富城",
+                "img" : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1142764628.jpg?crop=0.752xw:1.00xh;0.0593xw,0&resize=640:*" ,
+                "price": 100
+            },
+            {
+                "name": "我是劉德華",
+                "img" : "data:image/jpeg;base64,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" ,
+                "price": 200
+            },
+            {
+                "name": "我是吳奇隆",
+                "img" : "https://img.ltn.com.tw/Upload/ent/page/800/2018/11/27/phpIY8Q4M.jpg" ,
+                "price": 300
+            }
+        ]
+
+        const info = document.querySelector("#productCard")
+        for (let i = 0; i < arr.length ; i++) {
+            info.innerHTML +=
+            `<div class="product-wrap">
+            <img src=${arr[i].img} alt="">
+            <div> ${arr[i].name} </div>
+            <p>price :${arr[i].price}</p>　
+        </div>`        
+        }
+
+
+    </script>
+</body>
+
+</html>

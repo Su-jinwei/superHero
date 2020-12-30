@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電腦配置推薦</title>
+</head>
+
+<body>
+
+    <div id=info></div>
+    <div class="recommend"> 推薦1 </div>
+    <div class="recommend"> 推薦2 </div>
+
+
+    <script>
+        const info = document.querySelectorAll(".recommend")
+
+        const pc = [
+            {
+                "cpu": [
+                    {
+                        "title":"intel",
+                        "type": "i7-10750H",
+                        "price": 10000
+                    },
+                    {
+                        "title": "AMD",
+                        "type": "i9-10900K",
+                        "price": 22000
+
+                    }
+                ],
+                "vga ": [
+                    {
+                        "title" : "ROG",
+                        "type": "RTX-2060",
+                        "price": 28000
+                    },
+                    {
+                        "title" : "MSI",
+                        "type": "RTX-2080",
+                        "price": 34000
+
+                    }
+                ],
+                "hdd": [
+                {
+                            "title": "金士頓",
+                            "type": "512GB M.2",
+                            "price": 1200
+                        },
+                        {
+                            "title": "WD",
+                            "type": "512GB M.2",
+                            "price": 1400
+                        }
+                ],
+                "ram":
+                    [
+                        {
+                            "title": "創建",
+                            "type": "8GB DDR4-2666",
+                            "price": 1800
+                        },
+                        {
+                            "title": "威剛",
+                            "type": "16GB DDR4-2666",
+                            "price": 2500
+                        }
+                    ]
+            }
+        ]
+
+        console.log(pc[0])
+        for (let i = 0; i < pc[0].ram.length; i++) {
+            info[i].innerHTML += (pc[0].ram[i].title + pc[0].ram[i].type) + "&nbsp" + (pc[0].ram[i].price)  // 改成中音符 ` 
+        } 
+
+
+    </script>
+
+</body>
+
+</html>

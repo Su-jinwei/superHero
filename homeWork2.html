@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幫你配電腦ㄛ</title>
+</head>
+
+<body>
+    <script>
+
+        /*let PC_Configuration = [  // 大小寫會有影響嗎
+            {
+                
+                cpu = ["i7-10750H","i7-10870H","i9-9700H","i9-10750H"],
+                vga = ["RTX-2060","RTX-2070","RTX3080","PRX 750ti"],
+                hdd = ["512GB M.2","512GB SSD","1TB M.2","1TB SSD"],
+                ram = ["8GB DDR4-2666","16GB DDR4-2666"," 8GB DDR4-2600","8GB DDR4-2600"],
+                size = ["13吋","14.5吋","15.6吋","17.3吋"],
+                
+            }
+
+
+        ]*/
+        const cpu = [
+            {
+                "ver" : ["i7-10750H", "i7-10870H", "i9-9700H", "i9-10750H"],
+                "pri" : [10000, 12000, 15000, 18000]
+            }
+        ]
+        const vga = [
+            {
+                "ver" : ["RTX-2060", "RTX-2070", "RTX3080", "PRX 750ti"],
+                "pri" : [28000, 30000, 38000, 2500]
+            }
+        ]
+        const hdd = [
+            {
+                "ver" : ["512GB M.2", "512GB SSD", "1TB M.2", "1TB SSD"],
+                "pri" :[1500, 800, 2500, 1200]
+            }
+        ]
+        const ram = [
+            {
+                "ver" : ["8GB DDR4-2666", "16GB DDR4-2666", " 8GB DDR4-2600", "16GB DDR4-2600"],
+                "pri" :[1800, 2800, 1500, 2400]
+            }
+        ]
+        const size = [
+            {
+                "ver" : ["13吋", "14.5吋", "15.6吋", "17.3吋"],
+                "pri" :[3000, 5000, 6500, 8000]
+            }
+
+
+        ]
+        let mpc = function (cpu, vga, hdd, ram, size) {
+            this.cpu = cpu;
+            this.vga = vga;
+            this.ram = ram;
+            this.size = size;
+            pri = cpu.pri + vga.pri + hdd.pri + size.pri
+        };
+
+        for (let i = 0; i < cpu[i].ver; i++) {
+            for (let j = 0; j < vga[j].ver; j++) {
+                for (let k = 0; k < hdd[k].ver; k++) {
+                    for (let l = 0; l < ram[l].ver; l++) {
+                        for (let m = 0; m < size[m].ver; m++){
+                            let n = new mpc (cpu[i], vga[j], ram[k], hdd[l], size[m])  
+                        }
+                    }
+                }
+            }
+        }
+        for (let mpc = 0 ; mpc<1024 ; mpc++){
+            
+        }
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
